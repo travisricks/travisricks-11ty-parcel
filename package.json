@@ -1,7 +1,7 @@
 {
   "name": "eleventy-parcel",
   "version": "1.0.0",
-  "description": "",
+  "description": "website for Travis Ricks",
   "main": "index.js",
   "scripts": {
     "start": "run-s start:remove start:watch",
@@ -24,8 +24,8 @@
     "hash": "node onBuild.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Travis Ricks",
+  "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "browser-sync": "^2.26.7",

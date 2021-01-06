@@ -1,4 +1,4 @@
 ---
 layout: home.njk
-pageTitle: 'Eleventy-Parcel'
+pageTitle: 'Digital Home of Travis Ricks'
 ---
