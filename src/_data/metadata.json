@@ -1,0 +1,11 @@
+{
+  "title": "Digital Home of Travis Ricks",
+  "url": "/",
+  "description": "A basic description",
+  "author": {
+    "name": "Travis Ricks",
+    "email": "travis@travisricks.com"
+  },
+  "img": "og-image.jpg",
+  "githubUrl": "https://github.com/travisricks"
+}

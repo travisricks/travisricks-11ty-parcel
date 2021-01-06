@@ -1,0 +1,9 @@
+---
+pageTitle: 'All Content'
+---
+
+<ul>
+{%- for post in collections.allSortAlpha -%}
+  <li><a href="{{ post.url }}">{{ post.url }}</a></li>
+{%- endfor -%}
+</ul>

@@ -1,0 +1,47 @@
+body {
+  background-color: $white;
+  color: $bgDark;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+  font-display: swap;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @media (min-width: $md) {
+    padding: 0 2rem;
+  }
+}
+
+.page-content {
+  padding: 6rem 0 2rem 0;
+  flex-grow: 1;
+
+  @media (min-width: $md) {
+    padding: 10rem 0;
+  }
+}
+
+// Josh Comeau full-bleed technique https://codepen.io/travisricks/pen/rNMLYYE
+
+.wrapper {
+  display: grid;
+  grid-template-columns: unquote('1fr min(60ch, calc(100% - 30px)) 1fr');
+  grid-column-gap: 15px;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.full-bleed {
+  width: 100%;
+  grid-column: 1 / -1; /* Using negative number counts from the end, so this future proofs in case we add more columns to the grid*/
+  // max-height: 400px; /* add this and next line if you want */
+  // object-fit: cover;
+}

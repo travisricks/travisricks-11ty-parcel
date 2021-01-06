@@ -1,0 +1,26 @@
+/* Breakpoints */
+
+$md: 45em;
+$lg: 70em;
+
+/* Colors */
+$white: #f7f7f7;
+$lightGrey: #cdced1;
+
+$bgDark: #112338;
+$accent: #77eddf;
+$alt: darken($bgDark, 5%);
+
+/* CSS vars */
+
+:root {
+  --vr: 1rem;
+
+  @media (min-width: $md) {
+    --vr: 2rem;
+  }
+}
+
+/* Fonts */
+$font-body: 'Lato', sans-serif;
+$font-display: 'Amiri', serif;
