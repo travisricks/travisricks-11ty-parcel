@@ -12,7 +12,7 @@
     "watch:css": "parcel watch src/css/styles.scss",
     "watch:js": "parcel watch src/js/index.js",
     "watch:images": "parcel watch src/images/*",
-    "build": "run-s clean prod:parcel hash prod:eleventy",
+    "build": "run-s clean prod:parcel hash prod:eleventy social-images",
     "svg": "svg-sprite-generate -d src/icons -o src/_includes/partials/sprite.svg",
     "prod:eleventy": "npx @11ty/eleventy",
     "prod:parcel": "run-p build:css build:js build:images",
@@ -21,13 +21,15 @@
     "build:images": "parcel build src/images/*",
     "bs:start": "browser-sync start --config bs-config.js",
     "clean": "rm -rf dist",
-    "hash": "node onBuild.js"
+    "hash": "node onBuild.js",
+    "social-images": "eleventy-social-images --siteName 'Travis Ricks' --outputDir dist --theme sunset --dataFile social/pages.json --templatePath social/template.html"
   },
   "keywords": [],
   "author": "Travis Ricks",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11tyrocks/eleventy-plugin-social-images": "^0.1.2",
     "browser-sync": "^2.26.7",
     "furigana-markdown-it": "^1.0.3",
     "md5": "^2.3.0",

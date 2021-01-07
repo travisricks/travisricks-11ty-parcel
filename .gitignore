@@ -63,3 +63,6 @@ yarn-error.log
 dist
 src/.DS_Store
 .DS_Store
+
+# Build artifacts
+social

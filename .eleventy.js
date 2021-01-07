@@ -13,8 +13,13 @@ let markdownItFurigana = require('furigana-markdown-it')({
 })
 let markdownLib = markdownIt(markdownItOptions).use(markdownItFurigana)
 
+const socialImages = require("@11tyrocks/eleventy-plugin-social-images");
+
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLib)
+
+  eleventyConfig.addPlugin(socialImages);
 
   // make a custom alphabetically sorted collection of all content
   eleventyConfig.addCollection('allSortAlpha', function (collectionApi) {

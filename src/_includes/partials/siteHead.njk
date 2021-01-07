@@ -4,6 +4,9 @@
   {% set CssVersion = version.css %}
 {% endif %}
 
+{%- set pageSocialImg %}{{ metadata.url }}/previews/{{ pageTitle | slug }}.png{% endset
+-%}
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +18,9 @@
   <meta property="og:title" content="{{ metadata.title }}"/>
   <meta property="og:type" content="website"/>
   <meta property="og:description" content="{{ metadata.description }}"/>
-  <meta property="og:image" content="{{ metadata.url }}{{ metadata.img }}"/>
+  {# <meta property="og:image" content="{{ metadata.url }}{{ metadata.img }}"/> #}
+  <meta property="og:image" content="{{pageSocialImg}}" />
+  <meta name="twitter:image" content="{{pageSocialImg}}" />
   <meta property="og:url" content="{{ metadata.url }}"/>
   <meta property="og:site_name" content="{{ metadata.title }}"/>
   <meta name="twitter:card" content="summary_large_image"/>
